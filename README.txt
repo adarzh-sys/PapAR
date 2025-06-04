@@ -60,16 +60,3 @@ Assets/
 ├── UI/
 │ └── Slider (scale control)
 
-
----
-
-## 📄 License
-
-MIT License (or your preferred license)
-
----
-
-## ✍️ Credits
-
-Made by [adarzh-sys](https://github.com/adarzh-sys)  
-Unity + AR Foundation + Android
