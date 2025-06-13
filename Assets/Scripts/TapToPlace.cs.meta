@@ -1,2 +1,13 @@
 fileFormatVersion: 2
 guid: 20a55b2d7f1754c7ea6c2fc3b219cc99
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - placeablePrefab: {fileID: 919132149155446097, guid: dcd5bb6c84fed4b049340f32362bf050, type: 3}
+  - scaleSlider: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

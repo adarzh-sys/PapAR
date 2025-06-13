@@ -2,23 +2,28 @@ using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class TapToPlace : MonoBehaviour
 {
     public GameObject placeablePrefab;
-    private ARRaycastManager raycastManager;
-    private GameObject spawnedObject;
+    public Slider scaleSlider;
 
-    static List<ARRaycastHit> hits = new List<ARRaycastHit>();
+    private GameObject spawnedObject;
+    private ARRaycastManager raycastManager;
+    private static List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     void Awake()
     {
-        raycastManager = FindObjectOfType<ARRaycastManager>();
+        // Use FindFirstObjectByType (cleaner, avoids warning)
+        raycastManager = FindFirstObjectByType<ARRaycastManager>();
+        if (scaleSlider != null)
+            scaleSlider.onValueChanged.AddListener(UpdateScale);
     }
 
     void Update()
     {
-        if (Input.touchCount == 0)
+        if (Input.touchCount == 0 || raycastManager == null)
             return;
 
         Touch touch = Input.GetTouch(0);
@@ -29,14 +34,29 @@ public class TapToPlace : MonoBehaviour
         {
             Pose hitPose = hits[0].pose;
 
-            if (spawnedObject == null)
+            // If object already exists, destroy it first
+            if (spawnedObject != null)
             {
-                spawnedObject = Instantiate(placeablePrefab, hitPose.position, hitPose.rotation);
+                Destroy(spawnedObject);
             }
-            else
+
+            // Instantiate new object
+            spawnedObject = Instantiate(placeablePrefab, hitPose.position, hitPose.rotation);
+            spawnedObject.transform.localScale = Vector3.one * 0.01f;
+
+            // Set initial scale (slider value)
+            if (scaleSlider != null)
             {
-                spawnedObject.transform.SetPositionAndRotation(hitPose.position, hitPose.rotation);
+                UpdateScale(scaleSlider.value);
             }
+        }
+    }
+
+    void UpdateScale(float value)
+    {
+        if (spawnedObject != null)
+        {
+            spawnedObject.transform.localScale = Vector3.one * value;
         }
     }
 }
