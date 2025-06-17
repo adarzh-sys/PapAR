@@ -1,0 +1,5 @@
+/Volumes/zh-x8/dev/unity/PapAR/.utmp/RelWithDebInfo/m3s1u2v1/arm64-v8a/CMakeFiles/edit_cache.dir
+/Volumes/zh-x8/dev/unity/PapAR/.utmp/RelWithDebInfo/m3s1u2v1/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Volumes/zh-x8/dev/unity/PapAR/.utmp/RelWithDebInfo/m3s1u2v1/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Volumes/zh-x8/dev/unity/PapAR/.utmp/RelWithDebInfo/m3s1u2v1/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Volumes/zh-x8/dev/unity/PapAR/.utmp/RelWithDebInfo/m3s1u2v1/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="aruco-big" size="0.040000 0.039484" />
+    <ImageTarget name="green" size="0.040000 0.043998" />
+    <ImageTarget name="ghc-logo" size="0.050000 0.050000" />
+    <ImageTarget name="aruco" size="0.010000 0.009991" />
+  </Tracking>
+</QCARConfig>
